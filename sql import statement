@@ -1,0 +1,20 @@
+sqlite3 mgg.db
+CREATE TABLE mgg(
+"ID" TEXT,
+"title" TEXT,
+"description" TEXT,
+"streetaddress" TEXT,
+"city" TEXT,
+"state" TEXT,
+"amenityfeatures" TEXT,
+"locationtype" TEXT,
+"Year" TEXT,
+"notes" TEXT,
+"lon" INTEGER,
+"lat" INTEGER,
+"status" TEXT
+);
+
+
+.mode csv
+.import data.csv mgg
