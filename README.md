@@ -1,6 +1,5 @@
-# PersonWeb
+#Mapping the Gay Guides API
 
-This is a sample Go Web API built with [Gin](https://github.com/gin-gonic/gin) and connecting to a [SQLite database](https://www.sqlite.org/index.html)
+This repository contains the code for Mapping the Gay Guides's data api. It is buit in GO and Gin and relies on a SQLite3 database.
 
-This was built for a tutorial, [Building a Web App with Go and SQLite](https://www.allhandsontech.com/programming/golang/web-app-sqlite-go/) one of the many tutorials on [All Hands on Tech](https://www.allhandsontech.com). 
-
+This api is a work in progress and not yet available on the site. 
