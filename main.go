@@ -1,7 +1,7 @@
 package main
 
 import (
-	"PersonWeb/models"
+	"github.com/regan008/PersonWeb/models"
 	//"fmt"
 	"log"
 	"net/http"
