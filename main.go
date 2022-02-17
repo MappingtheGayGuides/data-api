@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	//"strconv"
+	//"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,7 +16,7 @@ func main() {
 	checkErr(err)
 
 	r := gin.Default()
-
+	r.Use(CORSMiddleware())
 	// API v1
 	v1 := r.Group("/api/v1")
 	{
@@ -26,10 +27,25 @@ func main() {
 		// v1.DELETE("person/:id", deletePerson)
 		// v1.OPTIONS("person", options)
 	}
-
 	// By default it serves on :8080 unless a
 	// PORT environment variable was defined.
-	r.Run()
+	r.Run(":1313")
+}
+
+func CORSMiddleware() gin.HandlerFunc {
+    return func(c *gin.Context) {
+
+			c.Header("Access-Control-Allow-Origin", "*")
+			c.Header("Access-Control-Allow-Headers", "*")
+
+
+        if c.Request.Method == "OPTIONS" {
+            c.AbortWithStatus(204)
+            return
+        }
+
+        c.Next()
+    }
 }
 
 func getPersons(c *gin.Context) {
