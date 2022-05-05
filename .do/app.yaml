@@ -1,0 +1,6 @@
+name: data-api
+services:
+  - name: web
+    github:
+      repo: MappingtheGayGuides/data-api
+      branch: main

@@ -29,7 +29,7 @@ func main() {
 	}
 	// By default it serves on :8080 unless a
 	// PORT environment variable was defined.
-	r.Run(":1313")
+	r.Run(":8080")
 }
 
 func CORSMiddleware() gin.HandlerFunc {

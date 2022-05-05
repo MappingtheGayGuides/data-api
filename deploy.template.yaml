@@ -1,0 +1,7 @@
+spec:
+  name: data-api
+  services:
+  - name: web
+    git:
+      branch: main
+      repo_clone_url: https://github.com/MappingtheGayGuides/data-api
